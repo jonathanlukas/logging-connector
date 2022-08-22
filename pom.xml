@@ -2,11 +2,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <name>connector-template</name>
-  <description>Camunda Connector Template</description>
-  <groupId>io.camunda.connector</groupId>
-  <artifactId>connector-template</artifactId>
+  <description>Log Template</description>
+  <groupId>com.camunda.consulting</groupId>
+  <artifactId>log-connector</artifactId>
   <packaging>jar</packaging>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
 
   <properties>
     <maven.compiler.release>11</maven.compiler.release>

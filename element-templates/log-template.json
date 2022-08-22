@@ -1,0 +1,44 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "Log Template",
+  "id": "3117ffc2-f451-4ed4-9721-ff811a3836cf",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "elementType": {
+    "value": "bpmn:ServiceTask"
+  },
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "io.camunda:template:log",
+      "binding": {
+        "type": "zeebe:taskDefinition:type"
+      }
+    },
+    {
+      "type": "String",
+      "label": "Log message to display",
+      "feel":"optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "message"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "type": "String",
+      "label": "Logger name to use",
+      "feel":"optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "loggerName"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    }
+  ]
+}

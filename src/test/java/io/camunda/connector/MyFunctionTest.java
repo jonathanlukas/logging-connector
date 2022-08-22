@@ -8,21 +8,18 @@ import org.junit.jupiter.api.Test;
 public class MyFunctionTest {
 
   @Test
-  void shouldReturnReceivedMessageWhenExecute() throws Exception {
+  void shouldReturnReceivedMessageWhenExecute() {
     // given
-    var input = new MyConnectorRequest();
+    var input = new LogInput();
     input.setMessage("Hello World!");
-    input.setToken("xobx-test");
-    var function = new MyConnectorFunction();
+    input.setLoggerName("Hello World Logger");
+    var function = new LogFunction();
     var context = ConnectorContextBuilder.create()
       .variables(input)
       .build();
     // when
     var result = function.execute(context);
     // then
-    assertThat(result)
-      .isInstanceOf(MyConnectorResult.class)
-      .extracting("myProperty")
-      .isEqualTo("Message received: Hello World!");
+    assertThat(result).isNull();
   }
 }
